@@ -1,12 +1,14 @@
 CREATE TABLE main (
     id serial PRIMARY KEY,
-    item varchar(100) NOT NULL,
-    date_of_completion DATE NOT NULL,
-    completed_by varchar(100) NOT NULL,
+    item varchar(256) NOT NULL,
+    date_of_completion date,
+    completed_by varchar(100),
     link text,
-    status text NOT NULL DEFAULT 'pending'
+    is_completed bool NOT NULL default false 
 );
 
-INSERT INTO todos (item, date_of_completion, completed_by, link, status)
+INSERT INTO main (item, date_of_completion, completed_by, link, status)
         VALUES ('', , '', '', '');
+
+
 
