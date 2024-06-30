@@ -17,9 +17,9 @@ cursor = conn.cursor()
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS main (
     id integer PRIMARY KEY,
-    item text NOT NULL,
+    item varchar(200) NOT NULL,
     date_of_completion date,
-    completed_by text,
+    completed_by varchar(50),
     link text,
     is_completed boolean NOT NULL DEFAULT false
 )
